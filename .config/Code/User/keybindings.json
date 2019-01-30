@@ -1,0 +1,193 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+/",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "-editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "alt+1",
+        "command": "-workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "alt+2",
+        "command": "-workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "alt+3",
+        "command": "-workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "ctrl+4",
+        "command": "workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "alt+4",
+        "command": "-workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "ctrl+5",
+        "command": "workbench.action.openEditorAtIndex5"
+    },
+    {
+        "key": "alt+5",
+        "command": "-workbench.action.openEditorAtIndex5"
+    },
+    {
+        "key": "ctrl+6",
+        "command": "workbench.action.openEditorAtIndex6"
+    },
+    {
+        "key": "alt+6",
+        "command": "-workbench.action.openEditorAtIndex6"
+    },
+    {
+        "key": "ctrl+7",
+        "command": "workbench.action.openEditorAtIndex7"
+    },
+    {
+        "key": "alt+7",
+        "command": "-workbench.action.openEditorAtIndex7"
+    },
+    {
+        "key": "ctrl+8",
+        "command": "workbench.action.openEditorAtIndex8"
+    },
+    {
+        "key": "alt+8",
+        "command": "-workbench.action.openEditorAtIndex8"
+    },
+    {
+        "key": "alt+0",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "alt+9",
+        "command": "-workbench.action.openEditorAtIndex9"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "-workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "alt+4",
+        "command": "workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "ctrl+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "alt+5",
+        "command": "workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "ctrl+5",
+        "command": "-workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "alt+6",
+        "command": "workbench.action.focusSixthEditorGroup"
+    },
+    {
+        "key": "ctrl+6",
+        "command": "-workbench.action.focusSixthEditorGroup"
+    },
+    {
+        "key": "alt+7",
+        "command": "workbench.action.focusSeventhEditorGroup"
+    },
+    {
+        "key": "ctrl+7",
+        "command": "-workbench.action.focusSeventhEditorGroup"
+    },
+    {
+        "key": "alt+8",
+        "command": "workbench.action.focusEighthEditorGroup"
+    },
+    {
+        "key": "ctrl+8",
+        "command": "-workbench.action.focusEighthEditorGroup"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "meta+r",
+        "command": "workbench.action.reloadWindow"
+    }
+]

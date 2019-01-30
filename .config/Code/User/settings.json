@@ -1,0 +1,11 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.statusBar.feedback.visible": false,
+    "breadcrumbs.enabled": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.minimap.showSlider": "always",
+    "swaggerViewer.defaultPort": 9867,
+    "editor.insertSpaces": false
+}
