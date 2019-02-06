@@ -19,3 +19,4 @@ popdi()
 
 alias popd='popdi'
 
+alias peekd='popd &> /dev/null; pushd .'
