@@ -2,36 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Black        0;30     Dark Gray     1;30
-# Red          0;31     Light Red     1;31
-# Green        0;32     Light Green   1;32
-# Brown/Orange 0;33     Yellow        1;33
-# Blue         0;34     Light Blue    1;34
-# Purple       0;35     Light Purple  1;35
-# Cyan         0;36     Light Cyan    1;36
-# Light Gray   0;37     White         1;37
-
-NC='\033[0m' # No Color
-
-BLACK='\033[0;30m'
-DRED='\033[0;31m'
-DGREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-	DYELLOW='\033[0;33m'
-DBLUE='\033[0;34m'
-DPURPLE='\033[0;35m'
-DCYAN='\033[0;36m'
-LGRAY='\033[0;37m'
-
-DGRAY='\033[1;30m'
-RED='\033[1;31m'
-GREEN='\033[1;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[1;34m'
-PURPLE='\033[1;35m'
-CYAN='\033[1;36m'
-WHITE='\033[1;37m'
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -55,7 +25,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -106,9 +76,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    
-    alias vdir='vdir --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -116,110 +85,12 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias lsa='ls -gGach --time-style=long-iso'
-alias lsl='ls -l'
-alias x='exit'
-
-cdi()
-{
-	clear
-	cd "$@"
-	lsa
-}
-alias cd='cdi'
-
-sdn()
-{
-	if [ $# -eq 0 ]
-	then
-		shutdown -t --no-wall 0
-	fi
-	
-	if [ $# -eq 1 ]
-	then
-		shutdown -t --no-wall $1
-	fi
-}
-randtext()
-{
-	if [ $# -eq 0 ]
-	then
-		echo "Usage: randtext <size>"
-	fi
-	
-	if [ $# -eq 1 ]
-	then
-		base64 /dev/urandom | head -c $1
-		echo ""
-	fi
-}
-
-alias dirs='dirs -v'
-#alias fixrights='chmod 644 * ; chmod 755 */'
-fixrights()
-{
-	if [ -f ]
-	then
-		chmod 644 *
-	fi
-	
-	if [ -f *.sh ]
-	then
-		chmod 755 *.sh
-	fi
-	
-	if [ -f *.deb ]
-	then
-		chmod 755 *.deb
-	fi
-	
-#	if [ -d ]
-#	then
-#		chmod 755 */
-#		for D in */; do
-#		if [ -d "${D}" ]; then
-#			cd ${D}
-#			fixrights
-#			cd ..
-#		fi
-#		done
-#	fi
-	
-	for D in $(find . -mindepth 1 -maxdepth 1 -type d);
-	do
-		chmod 755 "$D"
-		cd "$D"
-		fixrights
-		cd ..
-	done
-}
-
-alias purgedocker='docker rmi $(docker images -qf "dangling=true")'
-
-alias bc='bc -q'
-alias settingsconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-complete -W "add branch checkout commit config pull push status" settingsconfig
-
-alias zg='cd ~/go/src/gitlab.com/coiiot/'
-
-alias cls='clear ; lsa'
-
-alias crowd='while [ 1 ]; do rig | head -n 1; sleep 1; done'
-alias ssr='cmatrix -ab -C green -u 2'
-alias dupl='gnome-terminal & disown'
-alias newterm='dupl ; sleep 0.2 ; exit'
-
-# TEMP
-alias quicktest='echo "" ; ./ptest.sh -v --color=always | grep --color=never "ADMIN\|GetTopics" ; echo ""'
-alias getqueue='notify-send "Queue status:" "$(curl -s http://videod.mail.cloud.devmail.ru/result/canteen | jq ".queues[0,1].size")"'
-
-alias sudo='sudo '
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -245,11 +116,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export GITLAB_ACCESS_TOKEN=iyKDxyck1gASpcqZMUMa
 
-export GOPATH=${HOME}/go
-export PATH=${HOME}/go/bin:$PATH
-export GOBIN=$GOPATH/go/bin
+# Custom aliases, stored in bare git repository
+for filename in ~/.cfg/bashrc_includes/.* ; do
+	if [ -f "$filename" ];
+	then
+		 . "$filename"
+	fi
+done
 
-lsa
-# xdotool key 'ctrl+KP_Subtract'
+# Private stuff like access tokens and all, not to be stored in get
+for filename in ~/.cfg/bashrc_includes_secure/.* ; do
+	if [ -f "$filename" ];
+	then
+		 . "$filename"
+	fi
+done

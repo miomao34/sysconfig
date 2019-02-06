@@ -1,0 +1,21 @@
+unalias dirs &> /dev/null
+unalias pushd &> /dev/null
+unalias popd &> /dev/null
+
+alias dirs='dirs -v'
+
+pushdi()
+{
+	pushd $@ &> /dev/null
+	dirs
+}
+alias pushd='pushdi'
+
+popdi()
+{
+	popd $@ &> /dev/null
+	dirs	
+}
+
+alias popd='popdi'
+
