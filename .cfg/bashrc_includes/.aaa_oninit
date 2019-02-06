@@ -27,3 +27,10 @@ BLUE='\033[1;34m'
 PURPLE='\033[1;35m'
 CYAN='\033[1;36m'
 WHITE='\033[1;37m'
+
+
+# golang variables
+export GOPATH=${HOME}/go
+export PATH=${HOME}/go/bin:$PATH
+export GOBIN=$GOPATH/go/bin
+
