@@ -1,0 +1,2 @@
+alias getqueue='notify-send "Queue status:" "$(curl -s http://videod.mail.cloud.devmail.ru/result/canteen | jq ".queues[0,1].size")"'
+

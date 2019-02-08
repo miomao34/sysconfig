@@ -7,5 +7,7 @@
     "editor.cursorSmoothCaretAnimation": true,
     "editor.minimap.showSlider": "always",
     "swaggerViewer.defaultPort": 9867,
-    "editor.insertSpaces": false
+    "editor.insertSpaces": false,
+    "gitlens.defaultDateFormat": "YYYY M D ddd HH:ss",
+    "gitlens.statusBar.alignment": "left"
 }

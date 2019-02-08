@@ -126,7 +126,7 @@ for filename in ~/.cfg/bashrc_includes/.* ; do
 done
 
 # Private stuff like access tokens and all, not to be stored in get
-for filename in ~/.cfg/bashrc_includes_secure/.* ; do
+for filename in ~/.cfg/bashrc_includes_local/.* ; do
 	if [ -f "$filename" ];
 	then
 		 . "$filename"
