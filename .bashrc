@@ -125,7 +125,7 @@ for filename in ~/.cfg/bashrc_includes/.* ; do
 	fi
 done
 
-# Private stuff like access tokens and all, not to be stored in get
+# Private and local stuff like access tokens and work scripts, not to be stored in git
 for filename in ~/.cfg/bashrc_includes_local/.* ; do
 	if [ -f "$filename" ];
 	then
