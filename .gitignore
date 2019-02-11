@@ -1,5 +1,21 @@
 /*
 
-!/.cfg
-/.cfg/*
-!/.cfg/bashrc_includes
+# !/.cfg
+# /.cfg/*
+
+/.cfg/COMMIT_EDITMSG
+/.cfg/FETCH_HEAD
+/.cfg/HEAD
+/.cfg/ORIG_HEAD
+/.cfg/bashrc_includes_local/
+/.cfg/config
+/.cfg/description
+/.cfg/hooks/
+/.cfg/index
+/.cfg/index.lock
+/.cfg/info/
+/.cfg/logs/
+/.cfg/objects/
+/.cfg/refs/
+
+!/.cfg/bashrc_includes/.*
