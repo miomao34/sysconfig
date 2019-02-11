@@ -4,7 +4,3 @@ alias sudo='sudo '
 alias crowd='while [ 1 ]; do rig | head -n 1; sleep 1; done'
 alias ssr='cmatrix -ab -C green -u 2'
 
-alias zg='cd ~/go/src/gitlab.com/coiiot/'
-
-alias getqueue='notify-send "Queue status:" "$(curl -s http://videod.mail.cloud.devmail.ru/result/canteen | jq ".queues[0,1].size")"'
-
