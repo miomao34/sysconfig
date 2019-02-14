@@ -6,17 +6,17 @@ alias dirs='dirs -v'
 
 pushdi()
 {
-	pushd $@ &> /dev/null
+	pushd $@ 1> /dev/null
 	dirs
 }
 alias pushd='pushdi'
 
 popdi()
 {
-	popd $@ &> /dev/null
+	popd $@ 1> /dev/null
 	dirs	
 }
 
 alias popd='popdi'
 
-alias peekd='popd &> /dev/null; pushd .'
+alias peekd='popd 1> /dev/null; pushd .'
