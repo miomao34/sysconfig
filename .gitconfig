@@ -1,0 +1,3 @@
+[include]
+	path = .cfg/git_settings/.gitconfig
+	path = .cfg/git_settings_local/.gitconfig
