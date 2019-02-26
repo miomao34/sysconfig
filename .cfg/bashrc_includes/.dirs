@@ -19,4 +19,14 @@ popdi()
 
 alias popd='popdi'
 
-alias peekd='popd 1> /dev/null; pushd .'
+#alias peekd='popd 1> /dev/null; pushd .'
+peekdi()
+{
+	current_dir="$PWD"
+	popd 1> /dev/null
+	pushd .
+	\cd "$current_dir"
+	\cd - &> /dev/null
+}
+
+alias peekd='peekdi'
