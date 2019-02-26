@@ -11,5 +11,6 @@
     "gitlens.defaultDateFormat": "YYYY M D ddd HH:ss",
     "gitlens.statusBar.alignment": "left",
     "zenMode.hideLineNumbers": false,
-    "editor.minimap.enabled": true
+    "editor.minimap.enabled": true,
+    "window.newWindowDimensions": "maximized"
 }
