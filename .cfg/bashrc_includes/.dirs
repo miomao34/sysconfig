@@ -2,7 +2,7 @@ unalias dirs &> /dev/null
 unalias pushd &> /dev/null
 unalias popd &> /dev/null
 
-alias dirs='dirs -v'
+alias dirs='dirs -v | tail -n +2'
 
 pushdi()
 {
@@ -27,6 +27,6 @@ peekdi()
 	pushd .
 	\cd "$current_dir"
 	\cd - &> /dev/null
-}
+	}
 
 alias peekd='peekdi'
