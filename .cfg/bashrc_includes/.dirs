@@ -1,3 +1,5 @@
+. ~/.cfg/bashrc_includes/.ls
+
 unalias dirs &> /dev/null
 unalias pushd &> /dev/null
 unalias popd &> /dev/null
@@ -9,7 +11,7 @@ pushdi()
 	pushd $@ 1> /dev/null
 	local retval=$?
 	dirs
-
+	
 	return $retval
 }
 alias pushd='pushdi'
@@ -18,8 +20,13 @@ popdi()
 {
 	popd $@ 1> /dev/null
 	local retval=$?
-	dirs
-
+	if [ $retval -eq 0 ]
+	then
+		clear
+		dirs
+		lsa
+	fi
+	
 	return $retval
 }
 alias popd='popdi'
