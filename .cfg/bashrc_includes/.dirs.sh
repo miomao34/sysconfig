@@ -1,4 +1,4 @@
-. ~/.cfg/bashrc_includes/.ls
+. ~/.cfg/bashrc_includes/.ls.sh
 
 unalias dirs &> /dev/null
 unalias pushd &> /dev/null
