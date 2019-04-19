@@ -1,3 +1,14 @@
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US:en"
+
+# STARTING I3, IF NOT ALREADY STARTED
+if ! xset -q &>/dev/null;
+then
+	startx
+fi
+
+
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
