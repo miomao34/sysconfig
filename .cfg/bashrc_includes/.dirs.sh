@@ -39,14 +39,18 @@ peekdi()
 	if [ $retval_pop -eq 0 ]
 	then
 		pushd .
-		local retval=$?
-		\cd "$current_dir"
-		\cd - &> /dev/null
+		local retval_push=$?
+		if [ $retval_push -eq 0 ]
+		then
+			\cd "$current_dir"
+			\cd - &> /dev/null
+			cls
+		fi
 
 		return $retval_push
 	fi
 
 	return $retval_pop
-	}
+}
 
 alias peekd='peekdi'
