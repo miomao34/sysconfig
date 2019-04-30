@@ -8,8 +8,14 @@ alias dirs='dirs -v | tail -n +2'
 
 pushdi()
 {
+	previous_dir="$OLDPWD"
+	
 	pushd $@ 1> /dev/null
 	local retval=$?
+	
+	\cd "$previous_dir" &> /dev/null
+	\cd - &> /dev/null
+	
 	dirs
 	
 	return $retval
@@ -18,6 +24,9 @@ alias pushd='pushdi'
 
 popdi()
 {
+	
+	previous_dir="$OLDPWD"
+
 	popd $@ 1> /dev/null
 	local retval=$?
 	if [ $retval -eq 0 ]
@@ -26,6 +35,9 @@ popdi()
 		dirs
 		lsa
 	fi
+	
+	\cd "$previous_dir" &> /dev/null
+	\cd - &> /dev/null
 	
 	return $retval
 }
