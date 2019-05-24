@@ -4,7 +4,12 @@ unalias dirs &> /dev/null
 unalias pushd &> /dev/null
 unalias popd &> /dev/null
 
-alias dirs='dirs -v | tail -n +2'
+dirsi()
+{
+	dirs $@ &> /dev/null
+	\dirs -v | tail -n +2
+}
+alias dirs="dirsi"
 
 pushdi()
 {
@@ -46,7 +51,7 @@ alias popd='popdi'
 peekdi()
 {
 	current_dir="$PWD"
-	popd 1> /dev/null
+	popd $@ 1> /dev/null
 	local retval_pop=$?
 	if [ $retval_pop -eq 0 ]
 	then
@@ -66,3 +71,29 @@ peekdi()
 }
 
 alias peekd='peekdi'
+
+
+savefile="$HOME/.config/.savefile.txt"
+
+save()
+{
+	rm -f $savefile
+	touch $savefile
+	while read -r line
+	do
+		echo $line >> $savefile
+	done <<< $(\dirs -p -l | tail +2 | tac)
+}
+
+load()
+{
+	while \popd &> /dev/null; do :; done
+	
+	while read -r line
+	do
+		cd "$line"
+		pushd . &> /dev/null
+	done < "$savefile"
+	
+	dirs
+}
