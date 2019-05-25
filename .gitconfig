@@ -1,3 +1,6 @@
 [include]
-	path = .cfg/git_settings/.gitconfig
-	path = .cfg/git_settings_local/.gitconfig
+	path = .config/git_settings/.gitconfig
+	path = .config/git_settings_local/.gitconfig
+[user]
+	email = flex384@gmail.com
+	name = miomao34
