@@ -46,5 +46,6 @@
           "backgroundColor": "transparent"
         }
       ],
-      "window.titleBarStyle": "custom"
+      "window.titleBarStyle": "custom",
+      "workbench.startupEditor": "newUntitledFile"
 }
