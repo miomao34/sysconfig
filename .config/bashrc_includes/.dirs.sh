@@ -72,21 +72,43 @@ peekdi()
 
 alias peekd='peekdi'
 
-
-savefile="$HOME/.config/.savefile.txt"
+savefile_path="$HOME/.config/dirsaves/"
+savefile_default_name=".savefile.txt"
 
 save()
 {
-	rm -f $savefile
-	touch $savefile
+	if [ $# -eq 1 ]
+	then
+		savefile="$savefile_path.$1.txt"
+	else
+		savefile="$savefile_path$savefile_default_name"
+	fi
+	
+	if [ -f $savefile ]; then
+		rm -f $savefile_path$savefile_default_name
+	fi
+	touch $savefile_path$savefile_default_name
 	while read -r line
 	do
-		echo $line >> $savefile
+		echo $line >> "$savefile"
 	done <<< $(\dirs -p -l | tail +2 | tac)
 }
 
 load()
 {
+	if [ $# -eq 1 ]
+	then
+		if [ ! -f "$savefile_path.$1.txt" ]; then
+			echo "load: can't find savefile $1"
+			exit 1
+		fi
+		savefile="$savefile_path.$1.txt"
+	else
+		savefile="$savefile_path$savefile_default_name"
+	fi
+	
+	source ./.load_completion.sh
+	
 	while \popd &> /dev/null; do :; done
 	
 	while read -r line
@@ -96,4 +118,17 @@ load()
 	done < "$savefile"
 	
 	dirs
+}
+
+show()
+{
+	if [ $# -eq 0 ]
+	then
+		cat $savefile_path$savefile_default_name
+	fi
+	
+	if [ $# -eq 1 ]
+	then
+		cat $savefile_path.$1.txt
+	fi
 }
