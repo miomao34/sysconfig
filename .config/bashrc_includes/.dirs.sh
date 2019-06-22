@@ -73,15 +73,15 @@ peekdi()
 alias peekd='peekdi'
 
 savefile_path="$HOME/.config/dirsaves/"
-savefile_default_name=".savefile.txt"
+savefile_default_name="savefile.txt"
 
 save()
 {
 	if [ $# -eq 1 ]
 	then
-		savefile="$savefile_path.$1.txt"
+		savefile="${savefile_path}${1}.txt"
 	else
-		savefile="$savefile_path$savefile_default_name"
+		savefile="${savefile_path}${savefile_default_name}"
 	fi
 	
 	if [ -f $savefile ]; then
@@ -92,22 +92,22 @@ save()
 	do
 		echo $line >> "$savefile"
 	done <<< $(\dirs -p -l | tail +2 | tac)
+	
+	source $HOME/.config/bashrc_includes/.load_completion.sh
 }
 
 load()
 {
 	if [ $# -eq 1 ]
 	then
-		if [ ! -f "$savefile_path.$1.txt" ]; then
+		if [ ! -f "${savefile_path}${1}.txt" ]; then
 			echo "load: can't find savefile $1"
 			exit 1
 		fi
-		savefile="$savefile_path.$1.txt"
+		savefile="${savefile_path}${1}.txt"
 	else
 		savefile="$savefile_path$savefile_default_name"
 	fi
-	
-	source ./.load_completion.sh
 	
 	while \popd &> /dev/null; do :; done
 	
@@ -118,17 +118,19 @@ load()
 	done < "$savefile"
 	
 	dirs
+	
+	source $HOME/.config/bashrc_includes/.load_completion.sh
 }
 
 show()
 {
 	if [ $# -eq 0 ]
 	then
-		cat $savefile_path$savefile_default_name
+		cat "$savefile_path$savefile_default_name"
 	fi
 	
 	if [ $# -eq 1 ]
 	then
-		cat $savefile_path.$1.txt
+		cat "${savefile_path}${1}.txt"
 	fi
 }
