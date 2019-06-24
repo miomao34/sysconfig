@@ -1,6 +1,8 @@
 # sysconfig
 Basic settings for a fresh installation of linux
 
+Direct installation script link: https://git.io/fjwNX
+
 ### TODO:
 * Add gnome/unity shortcuts - different branches?
 * Support raspbian branch
