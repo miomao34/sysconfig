@@ -1,7 +1,7 @@
 # sysconfig
 Basic settings for a fresh installation of linux
 
-Direct installation script link: https://git.io/fjwNX
+Direct installation script link: https://git.io/sysconfig_install_master
 
 ### TODO:
 * Add gnome/unity shortcuts - different branches?
