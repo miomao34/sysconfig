@@ -1,7 +1,11 @@
 # sysconfig
 Basic settings for a fresh installation of linux
 
+<<<<<<< HEAD
 Direct installation script link: https://git.io/sysconfig_install_master
+=======
+Direct installation script link: https://git.io/sysconfig_install_raspbian
+>>>>>>> updated README
 
 ### TODO:
 * Add gnome/unity shortcuts - different branches?
