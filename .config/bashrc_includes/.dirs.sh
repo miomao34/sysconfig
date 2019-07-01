@@ -102,7 +102,7 @@ load()
 	then
 		if [ ! -f "${savefile_path}${1}.txt" ]; then
 			echo "load: can't find savefile $1"
-			exit 1
+			return 1
 		fi
 		savefile="${savefile_path}${1}.txt"
 	else
