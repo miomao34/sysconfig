@@ -18,8 +18,7 @@ pushdi()
 	pushd $@ 1> /dev/null
 	local retval=$?
 	
-	\cd "$previous_dir" &> /dev/null
-	\cd - &> /dev/null
+	export OLDPWD="$previous_dir"
 	
 	dirs
 	
@@ -41,8 +40,7 @@ popdi()
 		lsa
 	fi
 	
-	\cd "$previous_dir" &> /dev/null
-	\cd - &> /dev/null
+	export OLDPWD="$previous_dir"
 	
 	return $retval
 }
