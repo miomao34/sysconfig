@@ -8,4 +8,4 @@ do
 	cr+="${line%*\.txt} "
 done
 
-complete -W "$cr" load save show
+complete -W "${cr// savefile/}" load save show
