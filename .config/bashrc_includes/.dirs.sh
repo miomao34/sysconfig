@@ -85,7 +85,10 @@ save()
 	if [ -f $savefile ]; then
 		rm -f $savefile_path$savefile_default_name
 	fi
-	touch $savefile_path$savefile_default_name
+	
+	touch $savefile
+	echo -n > $savefile
+	
 	while read -r line
 	do
 		echo $line >> "$savefile"
