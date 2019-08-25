@@ -73,8 +73,14 @@ alias peekd='peekdi'
 savefile_path="$HOME/.config/dirsaves/"
 savefile_default_name="savefile.txt"
 
+# Enables saving current directory stack to file in ~/.config/dirsaves
 save()
 {
+	if [ ! -d $savefile_path ]
+	then
+		mkdir $savefile_path
+	fi
+	
 	if [ $# -eq 1 ]
 	then
 		savefile="${savefile_path}${1}.txt"
@@ -97,8 +103,14 @@ save()
 	source $HOME/.config/bashrc_includes/.load_completion.sh
 }
 
+# Enables loading from previously saved directory stack
 load()
 {
+	if [ ! -d $savefile_path ]
+	then
+		mkdir $savefile_path
+	fi
+	
 	if [ $# -eq 1 ]
 	then
 		if [ ! -f "${savefile_path}${1}.txt" ]; then
@@ -123,6 +135,7 @@ load()
 	source $HOME/.config/bashrc_includes/.load_completion.sh
 }
 
+# Shows saved directory stack
 show()
 {
 	if [ $# -eq 0 ]
