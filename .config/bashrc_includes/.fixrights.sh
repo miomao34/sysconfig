@@ -1,39 +1,27 @@
-#alias fixrights='chmod 644 * ; chmod 755 */'
+# filename handling shamelessly stolen from
+# https://askubuntu.com/questions/343727/filenames-with-spaces-breaking-for-loop-find-command
 
 fixrights()
 {
-	if [ -f ]
-	then
-		chmod 644 *
-	fi
-	
-	if [ -f *.sh ]
-	then
-		chmod 755 *.sh
-	fi
-	
-	if [ -f *.deb ]
-	then
-		chmod 755 *.deb
-	fi
-	
-#	if [ -d ]
-#	then
-#		chmod 755 */
-#		for D in */; do
-#		if [ -d "${D}" ]; then
-#			cd ${D}
-#			fixrights
-#			cd ..
-#		fi
-#		done
-#	fi
-	
-	for D in $(find . -mindepth 1 -maxdepth 1 -type d);
-	do
-		chmod 755 "$D"
-		cd "$D"
-		fixrights
-		cd ..
+	find . -name '*.*' -print0 | 
+	while IFS= read -r -d '' file; do
+		
+		[ -e "$file" ] || continue
+		
+		if [[ -d "$file" || ( -f "$file" && ( "$file" == *\.sh || "$file" == *\.py ) ) ]]
+		then
+			chmod 755 "$file"
+		else
+			if [[ -f "$file" && ( "$file" == *\.key ) ]]
+			then
+				chmod 000 "$file"
+			else
+				if [[ -f "$file" ]]
+				then
+					chmod 644 "$file"
+				fi
+			fi
+		fi
+		
 	done
 }
