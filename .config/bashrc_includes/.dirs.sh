@@ -1,5 +1,3 @@
-. ~/.config/bashrc_includes/.ls.sh
-
 unalias dirs &> /dev/null
 unalias pushd &> /dev/null
 unalias popd &> /dev/null
@@ -28,7 +26,6 @@ alias pushd='pushdi'
 
 popdi()
 {
-	
 	previous_dir="$OLDPWD"
 
 	popd $@ 1> /dev/null
@@ -100,7 +97,7 @@ save()
 		echo $line >> "$savefile"
 	done <<< $(\dirs -p -l | tail +2 | tac)
 	
-	source $HOME/.config/bashrc_includes/.load_completion.sh
+	dirs_completion
 }
 
 # Enables loading from previously saved directory stack
@@ -132,7 +129,7 @@ load()
 	
 	dirs
 	
-	source $HOME/.config/bashrc_includes/.load_completion.sh
+	dirs_completion
 }
 
 # Shows saved directory stack
@@ -147,4 +144,20 @@ show()
 	then
 		cat "${savefile_path}${1}.txt"
 	fi
+}
+
+dirs_completion()
+{
+	if [ ! -d $savefile_path ]
+	then
+		mkdir $savefile_path
+	fi
+
+	cr=""
+	for line in $(ls $savefile_path)
+	do
+		cr+="${line%*\.txt} "
+	done
+
+	complete -W "${cr// savefile/}" load save show
 }

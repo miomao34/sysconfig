@@ -1,14 +1,20 @@
 # possible changes regarding custom tag system will follow here
-# must be included after .ls.sh
 
-. ~/.config/bashrc_includes/.ls.sh
+alias lsa='ls -gGach --time-style=+"%Y.%m.%d %H:%M:%S"'
+alias lsl='ls -l'
+
+alias cls='clear ; lsa'
+
 
 unalias cd &> /dev/null
 
+# This cd clears screen and lists all files on directory change;
+# also, "cd +++" will translate to "cd ../../.."
 cdi()
 {
-	backward_symbol="+"
 	clear
+
+	backward_symbol="+"
 	symbols_count=$(awk -F"$backward_symbol" '{print NF-1}' <<< "${1}")
 	
 	if [ "$symbols_count" -ge "1" ] && [ -z "${1//\+}" ] && [ "$1" ]
