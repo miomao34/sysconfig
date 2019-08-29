@@ -22,3 +22,4 @@ sdn()
 		shutdown -t --no-wall $1
 	fi
 }
+
