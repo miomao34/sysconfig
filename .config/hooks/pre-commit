@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# Hook that generates all-in-one version of bashrc_includes
+# Intended for use on remote machines not under full control - lets you try the config withoud changing any files
+
+touch ~/.config/bashrc_includes_compiled/.compiled.sh
+
+cat ~/.bashrc > ~/.config/bashrc_includes_compiled/.compiled.sh
+echo >> ~/.config/bashrc_includes_compiled/.compiled.sh
+for filename in ~/.config/bashrc_includes/.*.sh ; do
+	if [ -f "$filename" ];
+	then
+		 cat "$filename" >> ~/.config/bashrc_includes_compiled/.compiled.sh
+		 echo >> ~/.config/bashrc_includes_compiled/.compiled.sh
+	fi
+done
+
+git add -f ~/.config/bashrc_includes_compiled/.compiled.sh

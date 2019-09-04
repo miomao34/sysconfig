@@ -118,7 +118,7 @@ fi
 
 
 # Custom aliases, stored in bare git repository
-for filename in ~/.config/bashrc_includes/.* ; do
+for filename in ~/.config/bashrc_includes/.*.sh ; do
 	if [ -f "$filename" ];
 	then
 		 . "$filename"
@@ -126,7 +126,7 @@ for filename in ~/.config/bashrc_includes/.* ; do
 done
 
 # Private and local stuff like access tokens and work scripts, not to be stored in git
-for filename in ~/.config/bashrc_includes_local/.* ; do
+for filename in ~/.config/bashrc_includes_local/.*.sh ; do
 	if [ -f "$filename" ];
 	then
 		 . "$filename"
