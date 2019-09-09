@@ -162,4 +162,3 @@ dirs_completion()
 	complete -W "${cr// savefile/}" load save show
 }
 
-dirs_completion

@@ -47,5 +47,6 @@
         }
       ],
       "window.titleBarStyle": "custom",
-      "workbench.startupEditor": "newUntitledFile"
+      "workbench.startupEditor": "newUntitledFile",
+      "[yaml]": {}
 }

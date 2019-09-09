@@ -378,7 +378,6 @@ dirs_completion()
 	complete -W "${cr// savefile/}" load save show
 }
 
-dirs_completion
 
 alias purgedocker='docker rmi $(docker images -qf "dangling=true")'
 
@@ -529,4 +528,6 @@ alias dupl='gnome-terminal & disown'
 alias newterm='dupl ; sleep 0.2 ; exit'
 
 lsa
+
+dirs_completion
 

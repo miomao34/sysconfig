@@ -1,1 +1,3 @@
 lsa
+
+dirs_completion
