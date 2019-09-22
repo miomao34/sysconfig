@@ -7,23 +7,23 @@
 # Cyan         0;36     Light Cyan    1;36
 # Light Gray   0;37     White         1;37
 
-NC='\033[0m' # No Color
+export NC='\033[0m' # No Color
 
-BLACK='\033[0;30m'
-DRED='\033[0;31m'
-DGREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-	DYELLOW='\033[0;33m'
-DBLUE='\033[0;34m'
-DPURPLE='\033[0;35m'
-DCYAN='\033[0;36m'
-LGRAY='\033[0;37m'
+export BLACK='\033[0;30m'
+export DRED='\033[0;31m'
+export DGREEN='\033[0;32m'
+export ORANGE='\033[0;33m'
+	export DYELLOW='\033[0;33m'
+export DBLUE='\033[0;34m'
+export DPURPLE='\033[0;35m'
+export DCYAN='\033[0;36m'
+export LGRAY='\033[0;37m'
 
-DGRAY='\033[1;30m'
-RED='\033[1;31m'
-GREEN='\033[1;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[1;34m'
-PURPLE='\033[1;35m'
-CYAN='\033[1;36m'
-WHITE='\033[1;37m'
+export DGRAY='\033[1;30m'
+export RED='\033[1;31m'
+export GREEN='\033[1;32m'
+export YELLOW='\033[1;33m'
+export BLUE='\033[1;34m'
+export PURPLE='\033[1;35m'
+export CYAN='\033[1;36m'
+export WHITE='\033[1;37m'
