@@ -9,6 +9,12 @@ alias ssr='cmatrix -ab -C green -u 2'
 
 alias x='exit'
 
+# cat several files side-by-side
+twocat()
+{
+	pr -w $COLUMNS -mt $@
+}
+
 # shutdown with default value of 0
 sdn()
 {
