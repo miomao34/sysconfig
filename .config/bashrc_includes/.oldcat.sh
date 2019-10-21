@@ -1,8 +1,8 @@
 oldcat()
 {
-	while read -r line
+	while IFS='$\n' read -r line
 	do
-		echo $line
+		echo -e "$line"
 		sleep 0.1
 	done
 }
