@@ -15,6 +15,8 @@ twocat()
 	pr -w $COLUMNS -mt $@
 }
 
+alias bc='bc -qil'
+
 # shutdown with default value of 0
 sdn()
 {
