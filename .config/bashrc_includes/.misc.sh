@@ -15,20 +15,16 @@ twocat()
 	pr -w $COLUMNS -mt $@
 }
 
+# cli calculator
 alias bc='bc -qil'
+
+# seek text entries in folder
+alias seek='grep -rnw'
 
 # shutdown with default value of 0
 sdn()
 {
-	if [ $# -eq 0 ]
-	then
-		shutdown -t --no-wall 0
-	fi
-	
-	if [ $# -eq 1 ]
-	then
-		shutdown -t --no-wall $1
-	fi
+	shutdown -t --no-wall ${1:-0}
 }
 
 # get ssh connection stack
