@@ -54,8 +54,8 @@ bindsym --release Print exec --no-2startup-id maim ~/Pictures/screenshots/$(date
 bindsym Mod1+F4 kill
 
 # google chrome
-bindsym $mod+g exec --no-startup-id google-chrome-stable
-bindsym $mod+Shift+g exec --no-startup-id "google-chrome-stable --incognito"
+bindsym $mod+g exec --no-startup-id "google-chrome-stable || chromium"
+bindsym $mod+Shift+g exec --no-startup-id "google-chrome-stable --incognito || chromium --incognito"
 
 # telegram
 bindsym $mod+t exec --no-startup-id ~/Downloads/Telegram/Telegram
