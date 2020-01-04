@@ -29,6 +29,10 @@ font pango:monospace 8
 # background
 exec_always "~/.fehbg"
 
+# scratchpad
+bindsym $mod+Shift+0 move scratchpad
+bindsym $mod+0 scratchpad show
+
 # natural scrolling for touchpad
 exec_always --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 
@@ -46,6 +50,10 @@ bindsym XF86MonBrightnessDown exec /usr/local/bin/brightness-
 bindsym XF86AudioMute exec "amixer sset Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -M sset Master 5%+"
 bindsym XF86AudioLowerVolume  exec "amixer -M sset Master 5%-"
+
+#keyboard layout
+exec_always setxkbmap -layout "us,ru"
+exec_always setxkbmap -option "grp:caps_toggle"
 
 # printscreen
 bindsym --release Print exec --no-2startup-id maim ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png | xclip -selection clipboard -t image/png
@@ -134,7 +142,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+# bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -146,7 +154,7 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+# bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
