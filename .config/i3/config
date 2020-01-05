@@ -53,7 +53,7 @@ bindsym XF86AudioLowerVolume  exec "amixer -M sset Master 5%-"
 
 #keyboard layout
 exec_always setxkbmap -layout "us,ru"
-exec_always setxkbmap -option "grp:caps_toggle"
+exec_always setxkbmap -option "grp:caps_toggle,grp_led:scroll"
 
 # printscreen
 bindsym --release Print exec --no-2startup-id maim ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png | xclip -selection clipboard -t image/png
