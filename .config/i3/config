@@ -29,6 +29,9 @@ font pango:monospace 8
 # background
 exec_always "~/.fehbg"
 
+# numlock by default
+exec_always "xdotool key Num_Lock"
+
 # scratchpad
 bindsym $mod+Shift+0 move scratchpad
 bindsym $mod+0 scratchpad show
