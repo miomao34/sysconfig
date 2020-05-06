@@ -54,4 +54,5 @@
       "editor.renderLineHighlight": "gutter",
       "debug.showInlineBreakpointCandidates": false,
       "editor.glyphMargin": false,
+      "C_Cpp.clang_format_path": "/usr/bin/clang-format",
 }

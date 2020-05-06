@@ -19,7 +19,13 @@ twocat()
 alias bc='bc -qil'
 
 # seek text entries in folder
-alias seek='grep -rnw'
+alias seek='grep -rn'
+
+# silent start
+runsilent()
+{
+	$@ &> /dev/null & disown
+}
 
 # shutdown with default value of 0
 sdn()

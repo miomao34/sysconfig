@@ -122,8 +122,12 @@ bindsym $mod+t exec --no-startup-id ~/Downloads/Telegram/Telegram
 # bindsym $mod+semicolon focus right
 
 # lock screen
-#bindsym $mod+l exec "if [ $(xset -q|grep LED| awk '{ print $10 }') -eq ; then i3lock -c 081219; else echo 0; fi"
-bindsym $mod+l exec "i3lock -c 081219"
+#if [[ "$fname" == "a.txt" || "$fname" == "c.txt" ]]; then
+#bindsym $mod+l exec --no-startup-id "if [[ $(xset -q|grep LED| awk '{ print $10 }') == '00000002' || $(xset -q|grep LED| awk '{ print $10 }') == '00000000' ]]; then then i3lock -c 083519; else i3lock -c 440000; fi"
+#bindsym $mod+l exec --no-startup-id "if [[ $(xset -q|grep LED| awk '{ print $10 }') == '00000002' || $(xset -q|grep LED| awk '{ print $10 }') == '00000000' ]]; then then i3lock -c 083519; else then i3lock -c 440000; fi"
+#bindsym $mod+l exec "if [ $(xset -q|grep LED| awk '{ print $10 }') -eq "00000002" ]; then i3lock -c 081219; else echo 0; fi"
+bindsym $mod+l exec "i3lock -c 082819"
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
