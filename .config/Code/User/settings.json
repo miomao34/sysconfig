@@ -1,6 +1,6 @@
 {
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Monokai",
     "workbench.statusBar.feedback.visible": false,
     "breadcrumbs.enabled": true,
     "editor.cursorBlinking": "smooth",
@@ -55,4 +55,9 @@
       "debug.showInlineBreakpointCandidates": false,
       "editor.glyphMargin": false,
       "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+      "python.linting.pylintPath": "/home/sinclair43/.local/bin/pylint",
+      "markdown.extension.print.theme": "dark",
+      "color-highlight.markRuler": false,
+      "color-highlight.markerType": "outline",
+      "csharp.referencesCodeLens.enabled": false,
 }

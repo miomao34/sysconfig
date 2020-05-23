@@ -8,5 +8,5 @@ fi
 # golang variables
 export GOPATH=${HOME}/go
 export PATH=${HOME}/go/bin:$PATH
-export GOBIN=$GOPATH/go/bin
+export GOBIN=$GOPATH/bin
 

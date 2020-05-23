@@ -1,0 +1,15 @@
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "loc: "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = #ffb52a
+
+label-layout = %layout%
+label-layout-underline = #ffb52a
+
+label-indicator-padding = 0
+label-indicator-margin = 0
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
