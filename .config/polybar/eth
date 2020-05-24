@@ -3,7 +3,7 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.system-internet}
 format-connected-prefix = "eth: "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%

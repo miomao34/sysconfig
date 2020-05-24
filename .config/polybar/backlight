@@ -16,3 +16,4 @@ card = intel_backlight
 ; https://wiki.archlinux.org/index.php/Backlight#ACPI
 ; Default: false
 enable-scroll = true
+format-underline = ${colors.system-gauges}

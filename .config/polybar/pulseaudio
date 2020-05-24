@@ -4,7 +4,9 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 label-volume = ♫%percentage%%
 label-volume-foreground = ${root.foreground}
+format-volume-underline = ${colors.system-gauges}
 
 ; format-muted = <label-volume>
 label-muted = M %percentage%%
 label-muted-foreground = ${colors.warn}
+format-muted-underline = ${colors.system-gauges}

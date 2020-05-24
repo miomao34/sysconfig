@@ -4,7 +4,7 @@ interface = wlp3s0b1
 interval = 3.0
 
 format-connected = <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.system-internet}
 label-connected = "w:"
 
 ;format-disconnected =

@@ -7,7 +7,7 @@ format-spacing = 1
 
 label-open = "|||"
 label-open-foreground = ${colors.foreground-alt}
-;label-close =  cancel
+label-close = [x]
 label-close-foreground = ${colors.foreground-alt}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
