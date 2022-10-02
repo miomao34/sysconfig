@@ -9,6 +9,12 @@ alias ssr='cmatrix -ab -C green -u 2'
 
 alias x='exit'
 
+# silent ffplay
+alias ffsilent="ffplay -hide_banner -nodisp -autoexit -loglevel error"
+
+# wait for a keypress
+alias waitchar="read -n 1 k <&1"
+
 # cat several files side-by-side
 twocat()
 {
@@ -17,6 +23,12 @@ twocat()
 
 # cli calculator
 alias bc='bc -qil'
+
+# cli calculator but inline
+cb()
+{
+	echo "$@" | bc
+}
 
 # seek text entries in folder
 alias seek='grep -rn'
@@ -31,6 +43,22 @@ runsilent()
 sdn()
 {
 	shutdown -t --no-wall ${1:-0}
+}
+
+# fix rights after copying from a hard drive
+fixrights()
+{
+	find . -type d | while read -r line
+	do
+		chmod 0755 "${line}"
+	done
+	find . -type f | while read -r file
+	do
+		chmod 0664 "${file}"
+	done
+
+	#find . -type d -print0 | xargs -0 chmod 0775
+	#find . -type f -print0 | xargs -0 chmod 0664
 }
 
 # get ssh connection stack

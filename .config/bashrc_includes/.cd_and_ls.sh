@@ -1,12 +1,24 @@
 # possible changes regarding custom tag system will follow here
 
-alias lsa='ls -gGach -N --time-style=+"%Y.%m.%d %H:%M:%S"'
-alias lsl='ls -l'
+unalias cd &> /dev/null
+
+unalias lsa lss lsl &> /dev/null
+
+lsa()
+{
+	if [ -z "${LSSHORT+OFF}" ]
+	then
+		ls -gGAchN --time-style=+"%Y.%m.%d %H:%M:%S" "$@"
+	else
+		ls -ogGAN --color=always --time-style=+"%y.%m.%d" "$@" | awk '{$1=$2=$3=""; print $0}' | tail -n +2 | cut -c4-
+	fi
+}
 
 alias cls='clear ; lsa'
 
-
-unalias cd &> /dev/null
+# lss and lsl switch between short and long modes of lsa in one terminal session; long is default
+alias lss='LSSHORT="ON"; PROMPT_DIRTRIM=1; export PS1="${SHORT_PS1}"; cls'
+alias lsl='unset LSSHORT; unset PROMPT_DIRTRIM; export PS1="${LONG_PS1}"; cls'
 
 # This cd clears screen and lists all files on directory change;
 # also, "cd +++" will translate to "cd ../../.."
@@ -27,6 +39,7 @@ cdi()
 	else	
 		cd "$@"
 	fi
+
 	lsa
 }
 

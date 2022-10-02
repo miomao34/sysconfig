@@ -118,7 +118,7 @@ fi
 
 
 # Custom aliases, stored in bare git repository
-for filename in ~/.config/bashrc_includes/.*.sh ; do
+for filename in ~/sysconfig/.config/bashrc_includes/.*.sh ; do
 	if [ -f "$filename" ];
 	then
 		 . "$filename"
@@ -126,9 +126,10 @@ for filename in ~/.config/bashrc_includes/.*.sh ; do
 done
 
 # Private and local stuff like access tokens and work scripts, not to be stored in git
-for filename in ~/.config/bashrc_includes_local/.*.sh ; do
+for filename in ~/sysconfig/.config/bashrc_includes_local/.*.sh ; do
 	if [ -f "$filename" ];
 	then
 		 . "$filename"
 	fi
 done
+. "$HOME/.cargo/env"
