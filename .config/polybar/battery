@@ -1,14 +1,20 @@
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ACAD
-full-at = 98
+battery = BAT0
+adapter = AC
+full-at = 100
 
 format-charging = CHAR <label-charging>
 format-charging-underline = ${colors.secondary}
+format-charging-foreground = ${colors.foreground-alt}
+
+label-charging-foreground = ${colors.foreground}
 
 format-discharging = BATT <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
+format-discharging-foreground = ${colors.foreground-alt}
+
+label-discharging-foreground = ${colors.foreground}
 
 format-full-prefix = "FULL "
 format-full-prefix-foreground = ${colors.foreground-alt}

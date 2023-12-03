@@ -28,8 +28,6 @@ alias lsl='unset LSSHORT; unset PROMPT_DIRTRIM; export PS1="${LONG_PS1}"; cls'
 # also, "cd +++" will be translated to "cd ../../.."
 cdi()
 {
-	clear
-
 	backward_symbol="+"
 
 	symbols_count=$(awk -F"$backward_symbol" '{print NF-1}' <<< "${1}")
@@ -45,7 +43,14 @@ cdi()
 		cd $@
 	fi
 
-	lsa
-}
+	if [ $? -eq 0 ]
+	then
+		cls
+	fi
+}	
 
 alias cd='cdi'
+
+# lss and lsl switch between short and long modes of lsa in one terminal session; long is default
+alias lss='LSSHORT="ON"; PROMPT_DIRTRIM=1; export PS1="${SHORT_PS1}"; cls'
+alias lsl='unset LSSHORT; unset PROMPT_DIRTRIM; export PS1="${LONG_PS1}"; cls'

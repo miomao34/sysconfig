@@ -36,7 +36,7 @@ system-gauges = #ffb52a
 
 
 [bar/main]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
 ;offset-x = 1%
@@ -70,7 +70,7 @@ font-1 = OpenSymbol:style=Regular:size=10;0
 
 modules-left = i3
 ; modules-center = mpd
-modules-right = backlight pulseaudio filesystem battery temperature memory cpu wlan eth xkeyboard date powermenu
+modules-right = backlight pulseaudio filesystem battery temperature memory cpu wlan eth xkeyboard date scratchpad powermenu
 
 tray-position = right
 tray-padding = 2
@@ -80,8 +80,8 @@ tray-background = ${colors.background-alt}
 
 ;override-redirect = true
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsprev
+scroll-down = i3wm-wsnext
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -112,13 +112,15 @@ include-file = ~/.config/polybar/cpu
 
 include-file = ~/.config/polybar/wlan
 
-include-file = ~/.config/polybar/eth
+;include-file = ~/.config/polybar/eth
 
 include-file = ~/.config/polybar/xkeyboard
 
 include-file = ~/.config/polybar/date
 
 include-file = ~/.config/polybar/powermenu
+
+include-file = ~/.config/polybar/scratchpad
 
 [settings]
 screenchange-reload = true

@@ -237,7 +237,7 @@ ShowTimePercent = yes
 #
 # Example:    Theme = laras_theme
 #
-Theme = darkdot_theme
+Theme = defcon
 
 # The theme used when running on an xterm.
 #

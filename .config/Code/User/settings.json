@@ -1,63 +1,83 @@
 {
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Monokai",
-    "workbench.statusBar.feedback.visible": false,
-    "breadcrumbs.enabled": true,
-    "editor.cursorBlinking": "smooth",
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.minimap.showSlider": "always",
-    "swaggerViewer.defaultPort": 9867,
-    "editor.insertSpaces": false,
-    "gitlens.defaultDateFormat": "YYYY M D ddd HH:ss",
-    "gitlens.statusBar.alignment": "left",
-    "zenMode.hideLineNumbers": false,
-    "editor.minimap.enabled": true,
-    "window.newWindowDimensions": "maximized",
-    "better-comments.highlightPlainText": true,
-    "better-comments.tags": [
-        {
-          "tag": "!",
-          "color": "#FF2D00",
-          "strikethrough": false,
-          "backgroundColor": "transparent"
-        },
-        {
-          "tag": "?",
-          "color": "#3498DB",
-          "strikethrough": false,
-          "backgroundColor": "transparent"
-        },
-        {
-          "tag": "//",
-          "color": "#474747",
-          "strikethrough": false,
-          "backgroundColor": "transparent"
-        },
-        {
-          "tag": "fixme",
-          "color": "#FF0000",
-          "strikethrough": false,
-          "backgroundColor": "transparent"
-        },
-        {
-          "tag": "todo",
-          "color": "#FFCC00",
-          "strikethrough": false,
-          "backgroundColor": "transparent"
-        }
-      ],
-      "window.titleBarStyle": "custom",
-      "workbench.startupEditor": "newUntitledFile",
-      "[yaml]": {
-          "editor.tabSize": 2
-      },
-      "editor.renderLineHighlight": "gutter",
-      "debug.showInlineBreakpointCandidates": false,
-      "editor.glyphMargin": false,
-      "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-      "python.linting.pylintPath": "/home/sinclair43/.local/bin/pylint",
-      "markdown.extension.print.theme": "dark",
-      "color-highlight.markRuler": false,
-      "color-highlight.markerType": "outline",
-      "csharp.referencesCodeLens.enabled": false,
+  "workbench.statusBar.feedback.visible": false,
+  "breadcrumbs.enabled": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.showSlider": "always",
+  "swaggerViewer.defaultPort": 9867,
+  "editor.insertSpaces": false,
+  "gitlens.defaultDateFormat": "YYYY M D ddd HH:ss",
+  "gitlens.statusBar.alignment": "left",
+  "zenMode.hideLineNumbers": false,
+  "editor.minimap.enabled": true,
+  "window.newWindowDimensions": "maximized",
+  "better-comments.highlightPlainText": true,
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "fixme",
+      "color": "#FF0000",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#FFCC00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  "workbench.startupEditor": "welcomePage",
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "editor.renderLineHighlight": "gutter",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "python.linting.pylintPath": "/home/sinclair43/.local/bin/pylint",
+  "markdown.extension.print.theme": "dark",
+  "color-highlight.markRuler": false,
+  "color-highlight.markerType": "outline",
+  "csharp.referencesCodeLens.enabled": false,
+  "workbench.colorTheme": "Monokai",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.annotations.changes": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "debug.toolBarLocation": "docked",
+  "debug.terminal.clearBeforeReusing": true,
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "search.useIgnoreFiles": false,
+  "editor.largeFileOptimizations": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.linux": "/home/sinclair43/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  },
+  "testing.automaticallyOpenPeekView": "never",
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": null
+  },
+  "python.formatting.provider": "black",
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 1,
+  "editor.defaultFormatter": null,
+  "cmake.configureOnOpen": false,
 }

@@ -9,6 +9,8 @@ alias ssr='cmatrix -ab -C green -u 2'
 
 alias x='exit'
 
+alias агсл="gsettings set org.gnome.desktop.input-sources current 0 && fuck"
+
 # silent ffplay
 alias ffsilent="ffplay -hide_banner -nodisp -autoexit -loglevel error"
 

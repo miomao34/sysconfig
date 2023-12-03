@@ -1,0 +1,7 @@
+[module/scratchpad]
+type = custom/text
+
+content = "#"
+content-foreground = ${colors.foreground-alt}
+
+click-left = i3-msg scratchpad show

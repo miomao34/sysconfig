@@ -7,5 +7,7 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch polybar
-#polybar main &
+MONITOR=eDP-1 polybar main &
+
+sleep 1 && \
 polybar main

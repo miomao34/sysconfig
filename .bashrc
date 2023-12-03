@@ -114,4 +114,3 @@ for filename in ~/sysconfig/.config/bashrc_includes_local/.*.sh ; do
 		 . "$filename"
 	fi
 done
-. "$HOME/.cargo/env"

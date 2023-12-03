@@ -1,0 +1,12 @@
+.bashrc
+.vimrc
+.moc
+.gitconfig
+.config/Code
+.config/bashrc_includes
+.config/git_settings
+.config/hooks
+.config/polybar
+.config/regolyth
+.config/i3
+.config/i3status

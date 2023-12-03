@@ -1,14 +1,14 @@
 [module/wlan]
 type = internal/network
-interface = wlp3s0b1
+interface = wlp0s20f3
 interval = 3.0
 
-format-connected = <label-connected>
+format-connected-prefix = "w: "
+format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected-underline = ${colors.system-internet}
-label-connected = "w:"
+label-connected = %local_ip%
 
-;format-disconnected =
-format-disconnected = <label-disconnected>
+format-disconnected = <label-disconnected>: down
 format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = w: down
+label-disconnected = w
 label-disconnected-foreground = ${colors.foreground-alt}
