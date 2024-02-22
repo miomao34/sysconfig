@@ -40,7 +40,7 @@ cdi()
 		
 		export OLDPWD="$current_dir"
 	else	
-		cd $@
+		cd "$@"
 	fi
 
 	if [ $? -eq 0 ]
