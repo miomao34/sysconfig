@@ -61,12 +61,12 @@ set_from_resource $ws8  i3-wm.workspace.08.name "8"
 ###############################################################################
 # Workspace output constraints
 # Attaching workspaces to specific monitors
-# The common setup is external to the right of the built-in laptop monitor,
+# The common setup is external to the left of the built-in laptop monitor,
 # counting workspaces from the left
 ###############################################################################
 
 set_from_resource $right_monitor i3-wm.right_monitor "eDP-1"
-set_from_resource $left_monitor  i3-wm.left_monitor  "HDMI-1"
+set_from_resource $left_monitor  i3-wm.left_monitor  "DP-2"
 
 workspace 1  output $left_monitor
 workspace 3  output $left_monitor

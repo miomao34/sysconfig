@@ -10,4 +10,4 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 MONITOR=eDP-1 polybar main &
 
 sleep 1 && \
-polybar main
+MONITOR=DP-2 polybar main &
