@@ -1,15 +1,9 @@
 #!/usr/bin/bash
 
-BACKUP_FOLDER="./$(date -Iseconds)-backup"
+BACKUP_FOLDER="./$(date +%Y-%m-%d_%H.%M.%S)-backup"
+installation_list_file="installation_list.txt"
 
-# saving current settings if they exist
-SAVE_LIST=(	".bashrc"
-			".gitconfig"
-			".vimrc"
-			".moc"
-			".config/*"
-		)
-for file in ${SAVE_LIST[@]}
+cat "${installation_list}" | while read file
 do
 	echo -n "${file}: "
 	if ! [[ -f "${file}" || -d "${file}" ]]

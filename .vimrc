@@ -47,7 +47,7 @@ set tabstop=4
 set softtabstop=4
 
 " Use spaces instead of spaces - disabled
-" set expandtab
+set expandtab
 set encoding=utf-8
 set smartindent
 set showmatch

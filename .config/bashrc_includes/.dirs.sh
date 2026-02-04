@@ -22,7 +22,7 @@ pushdi()
 	
 	return $retval
 }
-alias pushd='pushdi'
+alias pushd="pushdi"
 
 popdi()
 {
@@ -41,7 +41,7 @@ popdi()
 	
 	return $retval
 }
-alias popd='popdi'
+alias popd="popdi"
 
 peekdi()
 {
@@ -64,8 +64,8 @@ peekdi()
 
 	return $retval_pop
 }
+alias peekd="peekdi"
 
-alias peekd='peekdi'
 
 savefile_path="$HOME/.config/dirsaves/"
 savefile_default_name="savefile.txt"

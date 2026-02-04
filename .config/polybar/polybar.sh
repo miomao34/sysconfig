@@ -10,4 +10,10 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 MONITOR=eDP-1 polybar main &
 
 sleep 1 && \
+MONITOR=HDMI-1 polybar main &
+
+# type c hub outputs
+sleep 1 && \
+MONITOR=DP-1 polybar main &
+sleep 1 && \
 MONITOR=DP-2 polybar main &

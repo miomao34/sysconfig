@@ -252,7 +252,7 @@ AutoLoadLyrics = yes
 
 # MOC directory (where pid file, socket and state files are stored).
 # You can use ~ at the beginning.
-#MOCDir = ~/.moc
+MOCDir = "/home/${USER}/.moc"
 
 # Use mmap() to read files.  mmap() is much slower on NFS.
 #UseMMap = no
@@ -542,16 +542,16 @@ TagsCacheSize = 1024
 # Examples:   ExecCommand1 = "cp %f /mnt/usb_drive"
 #             ExecCommand2 = "/home/joe/now_playing %I"
 #
-#ExecCommand1 =
-#ExecCommand2 =
-#ExecCommand3 =
-#ExecCommand4 =
-#ExecCommand5 =
-#ExecCommand6 =
-#ExecCommand7 =
-#ExecCommand8 =
-#ExecCommand9 =
-#ExecCommand10 =
+ExecCommand1 = "${MOCDir}/scripts/seeker.sh 1"
+ExecCommand2 = "${MOCDir}/scripts/seeker.sh 2"
+ExecCommand3 = "${MOCDir}/scripts/seeker.sh 3"
+ExecCommand4 = "${MOCDir}/scripts/seeker.sh 4"
+ExecCommand5 = "${MOCDir}/scripts/seeker.sh 5"
+ExecCommand6 = "${MOCDir}/scripts/seeker.sh 6"
+ExecCommand7 = "${MOCDir}/scripts/seeker.sh 7"
+ExecCommand8 = "${MOCDir}/scripts/seeker.sh 8"
+ExecCommand9 = "${MOCDir}/scripts/seeker.sh 9"
+ExecCommand10 = "${MOCDir}/scripts/seeker.sh 0"
 
 # Display the cursor in the line with the selected file.  Some braille
 # readers (the Handy Tech modular series ZMU 737, for example) use the
@@ -684,7 +684,7 @@ MessageLingerTime = 1
 #
 # Example:    OnSongChange = "/home/jack/.moc/myscript %a %r"
 #
-#OnSongChange =
+OnSongChange = "${MOCDir}/scripts/on-song-change-notifier.sh %f %d"
 
 # If RepeatSongChange is 'yes' then MOC will execute the command every time
 # a song starts playing regardless of whether or not it is just repeating.

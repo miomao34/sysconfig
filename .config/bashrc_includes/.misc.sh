@@ -105,3 +105,5 @@ is_ssh()
 	echo -e "${RED} (THIS MACHINE)${NC}"
 
 }
+
+alias diff="diff --color -s"
