@@ -384,13 +384,13 @@ SilentSeekTime = 10
 # The default setting reflects the historical situation modified by
 # the experience of users.
 #
-#PreferredDecoders  = aac(aac,ffmpeg):m4a(ffmpeg)
-#PreferredDecoders += mpc(musepack,*,ffmpeg):mpc8(musepack,*,ffmpeg)
-#PreferredDecoders += sid(sidplay2):mus(sidplay2)
-#PreferredDecoders += wav(sndfile,*,ffmpeg)
-#PreferredDecoders += wv(wavpack,*,ffmpeg)
-#PreferredDecoders += audio/aac(aac):audio/aacp(aac):audio/m4a(ffmpeg)
-#PreferredDecoders += audio/wav(sndfile,*)
+PreferredDecoders  = aac(aac,ffmpeg):m4a(ffmpeg)
+PreferredDecoders += mpc(musepack,*,ffmpeg):mpc8(musepack,*,ffmpeg)
+PreferredDecoders += sid(sidplay2):mus(sidplay2)
+PreferredDecoders += wav(sndfile,*,ffmpeg)
+PreferredDecoders += wv(wavpack,*,ffmpeg)
+PreferredDecoders += audio/aac(aac):audio/aacp(aac):audio/m4a(ffmpeg)
+PreferredDecoders += audio/wav(sndfile,*)
 
 # The following PreferredDecoders attempt to handle the ambiguity surrounding
 # container types such as OGG for files.  The first two entries will force
@@ -398,11 +398,11 @@ SilentSeekTime = 10
 # audio), while the MIME media types will cause Internet audio streams to
 # be assessed on content (which may be either Vorbis or Speex).
 #
-#PreferredDecoders += ogg(vorbis,*,ffmpeg):oga(vorbis,*,ffmpeg):ogv(ffmpeg)
-#PreferredDecoders += application/ogg(vorbis):audio/ogg(vorbis)
-#PreferredDecoders += flac(flac,*,ffmpeg)
-#PreferredDecoders += opus(ffmpeg)
-#PreferredDecoders += spx(speex)
+PreferredDecoders += ogg(vorbis,*,ffmpeg):oga(vorbis,*,ffmpeg):ogv(ffmpeg)
+PreferredDecoders += application/ogg(vorbis):audio/ogg(vorbis)
+PreferredDecoders += flac(flac,*,ffmpeg)
+PreferredDecoders += opus(ffmpeg)
+PreferredDecoders += spx(speex)
 
 # Which resampling method to use.  There are a few methods of resampling
 # sound supported by libresamplerate.  The default is 'Linear') which is

@@ -48,20 +48,21 @@ sdn()
 }
 
 # fix rights after copying from a hard drive
-fixrights()
-{
-	find . -type d | while read -r line
-	do
-		chmod 0755 "${line}"
-	done
-	find . -type f | while read -r file
-	do
-		chmod 0664 "${file}"
-	done
-
-	#find . -type d -print0 | xargs -0 chmod 0775
-	#find . -type f -print0 | xargs -0 chmod 0664
-}
+# commented out since there is a stolen version
+#fixrights()
+#{
+#	find . -type d | while read -r line
+#	do
+#		chmod 0755 "${line}"
+#	done
+#	find . -type f | while read -r file
+#	do
+#		chmod 0664 "${file}"
+#	done
+#
+#	#find . -type d -print0 | xargs -0 chmod 0775
+#	#find . -type f -print0 | xargs -0 chmod 0664
+#}
 
 # get ssh connection stack
 is_ssh()

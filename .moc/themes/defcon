@@ -1,0 +1,38 @@
+# Yellow/Red theme - mostly Yellow. By Morten Grunnet Buhl, edited by miomao34
+# Doesn't work on terminals when underline is not supported (like Linux console)
+
+background		= red		default
+frame			= red		default
+window_title		= yellow	default dim
+directory		= yellow	default
+selected_directory	= red		default bold
+playlist		= yellow	default
+selected_playlist	= red		default bold
+file			= yellow	default
+selected_file		= red		default bold
+marked_file		= yellow	default bold,reverse
+marked_selected_file	= red		default bold,reverse
+info			= yellow	default
+selected_info		= red		default
+marked_info		= yellow	default bold,reverse
+marked_selected_info	= red		default bold,reverse
+status			= yellow	default dim
+title			= yellow	default
+state			= yellow	default
+current_time		= yellow	default
+time_left		= yellow	default dim
+total_time		= yellow	default
+time_total_frames	= yellow	default
+sound_parameters	= yellow	default dim
+legend			= yellow	default dim
+disabled		= red		default dim
+enabled			= yellow	default bold
+empty_mixer_bar		= red		default
+filled_mixer_bar	= yellow	red
+empty_time_bar		= yellow	default dim
+filled_time_bar		= yellow	red
+entry			= yellow	default
+entry_title		= yellow	default bold
+error			= cyan		default
+message			= yellow	default
+plist_time		= yellow	default dim
