@@ -201,7 +201,7 @@ MusicDir = "/home/${USER}/Music"
 #ShowHiddenFiles = no
 
 # Hide file name extensions?
-HideFileExtension = yes
+HideFileExtension = no
 
 # Show file format in menu?
 ShowFormat = no
@@ -425,7 +425,7 @@ PreferredDecoders += spx(speex)
 #    ZeroOrderHold - really poor quality, but it's really fast.
 #    Linear - a bit better and a bit slower.
 #
-#ResampleMethod = Linear
+ResampleMethod = SincMediumQuality
 
 # Always use this sample rate (in Hz) when opening the audio device (and
 # resample the sound if necessary).  When set to 0 the device is opened
@@ -542,15 +542,15 @@ TagsCacheSize = 1024
 # Examples:   ExecCommand1 = "cp %f /mnt/usb_drive"
 #             ExecCommand2 = "/home/joe/now_playing %I"
 #
-ExecCommand1 = "${MOCDir}/scripts/seeker.sh 1"
-ExecCommand2 = "${MOCDir}/scripts/seeker.sh 2"
-ExecCommand3 = "${MOCDir}/scripts/seeker.sh 3"
-ExecCommand4 = "${MOCDir}/scripts/seeker.sh 4"
-ExecCommand5 = "${MOCDir}/scripts/seeker.sh 5"
-ExecCommand6 = "${MOCDir}/scripts/seeker.sh 6"
-ExecCommand7 = "${MOCDir}/scripts/seeker.sh 7"
-ExecCommand8 = "${MOCDir}/scripts/seeker.sh 8"
-ExecCommand9 = "${MOCDir}/scripts/seeker.sh 9"
+ExecCommand1  = "${MOCDir}/scripts/seeker.sh 1"
+ExecCommand2  = "${MOCDir}/scripts/seeker.sh 2"
+ExecCommand3  = "${MOCDir}/scripts/seeker.sh 3"
+ExecCommand4  = "${MOCDir}/scripts/seeker.sh 4"
+ExecCommand5  = "${MOCDir}/scripts/seeker.sh 5"
+ExecCommand6  = "${MOCDir}/scripts/seeker.sh 6"
+ExecCommand7  = "${MOCDir}/scripts/seeker.sh 7"
+ExecCommand8  = "${MOCDir}/scripts/seeker.sh 8"
+ExecCommand9  = "${MOCDir}/scripts/seeker.sh 9"
 ExecCommand10 = "${MOCDir}/scripts/seeker.sh 0"
 
 # Display the cursor in the line with the selected file.  Some braille

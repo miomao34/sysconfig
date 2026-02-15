@@ -474,12 +474,16 @@ floating_maximum_size -1 x -1
 for_window [class="^.*"] border pixel 1
 
 # various modes of screenshoting, all put the screenshot into ~/Pictures/screenshots/<date-time.nanoseconds>.png and into copy buffer
-# Printscreen - screenshot the whole screen
+# keychron doesn't have printscreen but has PgUp rebindable to printscreen so i use it as a replacement
+# Printscreen or mod+PgUp - screenshot the whole screen
 bindsym --release Print exec --no-startup-id scrot -q 100 -f ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png -e 'xclip -selection clipboard -target image/png -i $f'
-# Shift+Printscreen - screenshot the whole screen
+bindsym --release $mod+Prior exec --no-startup-id scrot -q 100 -f ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png -e 'xclip -selection clipboard -target image/png -i $f'
+# Shift+Printscreen or mod+Shift+PgUp - screenshot the whole screen
 bindsym --release Shift+Print exec --no-startup-id scrot -q 100 -fu ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png -e 'xclip -selection clipboard -target image/png -i $f'
-# Ctrl+Printscreen - screenshot the whole screen
+bindsym --release $mod+Shift+Prior exec --no-startup-id scrot -q 100 -fu ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png -e 'xclip -selection clipboard -target image/png -i $f'
+# Ctrl+Printscreen or mod+Ctrl+PgUp - screenshot the whole screen
 bindsym --release Control+Print exec --no-startup-id scrot -q 100 -fs ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym --release $mod+Control+Prior exec --no-startup-id scrot -q 100 -fs ~/Pictures/screenshots/$(date +%F-%H%M%S.%N).png -e 'xclip -selection clipboard -target image/png -i $f'
 
 # for some reason some installations increment/decrement by 2% instead of 1% on Shift+VolumeUp/Down
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
