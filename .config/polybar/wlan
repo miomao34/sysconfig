@@ -7,6 +7,7 @@ format-connected-prefix = "w: "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected-underline = ${colors.system-internet}
 label-connected = %local_ip%
+label-connected-alt = "########"
 
 format-disconnected = <label-disconnected>: down
 format-disconnected-underline = ${self.format-connected-underline}

@@ -1,6 +1,6 @@
 [include]
 	path = sysconfig/.config/git_settings/.gitconfig
-	path = sysconfig/.config/git_settings_local/.gitconfig
+	path = sysconfig/.config/git_settings/.gitconfig_local
 
 [core]
 	editor = vim

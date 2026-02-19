@@ -575,6 +575,21 @@ mode "Resize Mode" {
 }
 bindsym $mod+r mode "Resize Mode"
 
+
+mode "Mover Mode" {
+        ## Mover // Move // k j h l ##
+        bindsym h exec --no-startup-id xdotool key Left
+        bindsym j exec --no-startup-id xdotool key Up
+        bindsym k exec --no-startup-id xdotool key Down
+        bindsym l exec --no-startup-id xdotool key Right
+
+        ## Mover // Exit Mover Mode // Escape or Enter ##
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+m mode "default"
+}
+bindsym $mod+m mode "Mover Mode"
+
 ###############################################################################
 # i3 Appearance and Behavior
 ###############################################################################
