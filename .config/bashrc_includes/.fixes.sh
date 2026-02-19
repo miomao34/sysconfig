@@ -25,3 +25,16 @@ fixrights()
 		
 	done
 }
+
+fixmusicnames()
+{
+    ls | while read line;
+    do
+        if [[ $# == 1 && $1 == "--go" ]]
+        then
+            mv "$line" "${line##* - }"
+        else
+            echo -e "${RED}'$line'${NC} -> ${GREEN}'${line##* - }'${NC}"
+        fi
+    done
+}
