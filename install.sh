@@ -3,10 +3,12 @@
 BACKUP_FOLDER="./$(date +%Y-%m-%d_%H.%M.%S)-backup"
 installation_list_file="installation_list.txt"
 
-cat "${installation_list}" | while read file
+mkdir -p "$BACKUP_FOLDER"
+
+cat "${installation_list}" | grep "[a-z]" | while read file
 do
 	echo -n "${file}: "
-	if ! [[ -f "${file}" || -d "${file}" ]]
+	if [[ ! -e "~/${file}" ]]
 	then
 		echo -n "not found - "
 	else
