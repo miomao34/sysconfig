@@ -5,7 +5,7 @@ installation_list_file="installation_list.txt"
 
 mkdir -p "$BACKUP_FOLDER"
 
-cat "${installation_list}" | grep "[a-z]" | while read file
+cat "${installation_list_file}" | grep "[a-z]" | while read file
 do
 	echo -n "${file}: "
 	if [[ ! -e "~/${file}" ]]
