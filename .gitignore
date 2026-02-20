@@ -9,12 +9,12 @@
 !.config/i3/config
 !.config/regolith/i3
 !.config/i3status/config
-!.config/polybar/
+!.config/polybar/**
 
-!.config/bashrc_includes
+!.config/bashrc_includesш.**
 
 # for system-specific scripts
-.config/bashrc_includes_local/
+.config/bashrc_includes_local/**
 
 !.gitignore
 !.gitconfig
@@ -23,8 +23,8 @@
 
 !.moc/config*
 !.moc/keymap*
-!.moc/scripts/
-!.moc/themes/
+!.moc/scripts/**
+!.moc/themes/**
 
 !.bashrc
 !README.md
